@@ -1,0 +1,122 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="FastPasswordGenerator.SiteMaster" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - FastPasswordGenerator</title>
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+   <%-- <link rel="canonical" href="https://localhost:44390/" />--%>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <%--<meta http-equiv="Content-Security-Policy" content="script-src 'none'">--%>
+    <meta name="google-site-verification" content="YGNvmOWfCRVE-XihCmI-TichQdLuA5EBsqGgG-POLRM" />
+    <meta name="msvalidate.01" content="7AD63F2AAB111621CD0EC3C49B779DD4" />
+    <%--<asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>--%>
+    <link rel="apple-touch-icon" href="/FastPasswordGenerator.webp"/>
+    <meta name="theme-color" content="#0385b7" />
+    <link rel="manifest" href="/manifest.json"/>  
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+ 
+    <link href="~/Content/images/FastPasswordGenerator.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--<link href="Content/css/DesignStyle.css" rel="stylesheet" />--%>
+    <link href="Content/Site.css" rel="stylesheet" />
+
+
+    <asp:ContentPlaceHolder ID="HeadContent" runat="server"></asp:ContentPlaceHolder>
+</head>
+<body>
+    <form runat="server">        
+
+        <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #0385b7">
+            <div class="container">
+                <div class="navbar-header">
+                   <%--<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>--%>
+                    
+                    <a class="navbar-brand" runat="server" href="~/PasswordsGenerator" style="color: white; font-size: x-large">Fast Password Generator</a>
+                </div>
+               <div class="navbar-collapse collapse pull-right">
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" style="color: white; font-size: large;text-align:right" href="PasswordsGenerator.aspx" rel="noopener noreferrer">Password Generator</a></li>
+                        <li><a runat="server" style="color: white; font-size: large" href="md5-hash-generator.aspx" rel="noopener noreferrer">MD5 Generator</a></li>
+                        <li><a runat="server" style="color: white; font-size: large" href="~/Contact" rel="noopener noreferrer">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container body-content">
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+            <hr class="hr">
+          <footer class="footclass">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <p style="color: black; text-align: center; font-size: 15px">© Copyright <%: DateTime.Now.Year %>  Fast Password Generator – All Right Reserved | Made with ❤️ in INDIA</p>
+                    </div>
+                </div>
+
+                <div class="row"  style="text-align: center">
+                    <div class="col-lg-12">
+                       
+                        <p>
+                        <a href="PasswordsGenerator.aspx" rel="noopener noreferrer" target="_blank">Passwords Generator</a>
+                            &nbsp
+                        <a href="md5-hash-generator.aspx" rel="noopener noreferrer" target="_blank">MD5 Hash Generator</a>
+                            &nbsp
+                        <a href="http://www.stopsweats.org" rel="noopener noreferrer" target="_blank">StopSweats</a>
+                            &nbsp
+                        <a href="http://www.stopsweats.org" rel="noopener noreferrer" target="_blank">StopSweats</a>
+                            &nbsp
+                        <a href="http://www.stopsweats.org" rel="noopener noreferrer" target="_blank">StopSweats</a>
+                            &nbsp                            
+                        <a href="http://www.stopsweats.org" rel="noopener noreferrer" target="_blank">StopSweats</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row" style="text-align: center">
+                    <p style="color: black; text-align: center; font-size: 15px">Developed By: 
+                        <a href="https://www.linkedin.com/in/thesanjayboga/" rel="noopener noreferrer" target="_blank">Sanjay Boga</a></p>
+                </div>
+            </footer>
+        </div>
+
+        <asp:ScriptManager runat="server">
+            <Scripts>
+              
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+               
+            </Scripts>
+        </asp:ScriptManager>
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceworker.js')
+                .then(function () { console.log('Service Worker Registered'); });
+        }
+    </script>
+    
+</body>
+</html>

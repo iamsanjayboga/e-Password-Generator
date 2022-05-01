@@ -1,0 +1,57 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Mobile.master.cs" Inherits="FastPasswordGenerator.Site_Mobile" %>
+<%@ Register Src="~/ViewSwitcher.ascx" TagPrefix="friendlyUrls" TagName="ViewSwitcher" %>
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+<head runat="server">
+    <meta name="viewport" content="width=device-width" />
+    <title><%: Page.Title %> - FastPasswordGenerator</title>
+
+    <meta name="robots" content="follow, index, max-snippet:-1, max-video-preview:-1, max-image-preview:large"/>
+   <%-- <link rel="canonical" href="https://localhost:44390/" />--%>
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:type" content="website" />
+    <meta name="google-site-verification" content="YGNvmOWfCRVE-XihCmI-TichQdLuA5EBsqGgG-POLRM" />
+    <meta name="msvalidate.01" content="7AD63F2AAB111621CD0EC3C49B779DD4" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link rel="apple-touch-icon" href="/FastPasswordGenerator.webp"/>
+    <meta name="theme-color" content="#0385b7"/>
+    <link rel="manifest" href="/manifest.json"/>  
+    <link href="~/Content/images/FastPasswordGenerator.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="Content/Site.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder runat="server" ID="HeadContent" />
+</head>
+<body>
+    <form id="form1" runat="server">
+      
+    <div>
+       
+         <div class="navbar navbar-inverse navbar-fixed-top" style="background-color: #0385b7">
+            <div class="container">
+                <div class="navbar-header">                  
+                    <a class="navbar-brand" runat="server" href="~/PasswordsGenerator" style="color: white; font-size: x-large">Fast Password Generator</a>
+                </div>
+               
+            </div>
+        </div>
+        <asp:ContentPlaceHolder runat="server" ID="FeaturedContent" />
+        <section class="content-wrapper main-content clear-fix">
+            <asp:ContentPlaceHolder runat="server" ID="MainContent" />
+        </section>
+        <friendlyUrls:ViewSwitcher runat="server" />
+    </div>
+
+        <asp:ContentPlaceHolder ID="ScriptContent" runat="server"></asp:ContentPlaceHolder>
+    </form>
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker
+                .register('/serviceworker.js')
+                .then(function () { console.log('Service Worker Registered'); });
+        }
+    </script>
+</body>
+</html>

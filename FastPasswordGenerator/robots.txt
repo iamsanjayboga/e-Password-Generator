@@ -1,0 +1,6 @@
+﻿User-agent: *
+Allow: /Content/
+Allow: /Content/css/
+Allow: /Content/images/
+Allow: /Scripts/
+Crawl-delay: 10

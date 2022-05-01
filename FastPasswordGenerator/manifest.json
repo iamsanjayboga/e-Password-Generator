@@ -1,0 +1,27 @@
+{
+  "name": "Fast Passwords Generator",
+  "short_name": "PasswordGenerator Tool",
+  "display": "standalone",
+  "start_url": "/PasswordsGenerator.aspx",
+  "background_color": "#fff",
+  "theme_color": "#0385b7",
+  "icons": [
+    {
+      "src": "/Content/images/FastPasswordGenerator.ico",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/Content/images/FastPasswordGenerator.webp",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/Content/images/FastPasswordGenerator.webp",
+      "type": "image/png",
+      "sizes": "144x144",
+      "purpose": "maskable"
+    }
+  ]
+
+}
